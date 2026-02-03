@@ -1,20 +1,19 @@
 <div align="center">
   <img src="https://i.imgur.com/v0Tx6am.png" alt="AI Code Guide" />
   <p align="center">
-    By <a href="https://x.com/aut0mata">Vilson Vieira</a> and
-       <a href="https://x.com/esrtweet">Eric S. Raymond</a>
+    By <a href="https://github.com/MoGHenry">Henry Qiu</a>
   </p>
-  <a href="https://discord.gg/NrDfXmtvw3">
-     <img src="https://i.imgur.com/uqKVFHj.png" alt="Join our Discord" height="48" />
+  <a href="## TODO: Add Discord link">
+     <img src="https://i.imgur.com/uqKVFHj.png" alt="Give me a star on GitHub" height="48" />
   </a>
 </div>
 <br/>
 
 > Everything you wanted to know about using AI to help you code and/or to code
-> for you.
+> for you. **Updated for Agent Skills: Next-generation workflows by utilizing more than 30k+ skills created by the community.**
 
 <div align="center" style="font-size: 30px">
-  <a href="#vibe">TL;DR Just show me how to vibe code 😎!</a>
+  <a href="#vibe">TL;DR Just show me how to vibe code 😎!</a> | <a href="#agent-skills-workflow">Agent Skills Workflow</a>
 </div>
 <br /><br />
 
@@ -25,8 +24,8 @@ changing. And it's a profound change: on the tools we use, the
 way we code and think about software products and systems.
 
 And it's changing super fast! New LLM models are being released every week. New
-tools, new editors, new "vibe coding" practices, new protocols, MCP, A2A, SLOP,
-... And it's really hard to keep track of all that. Everything is
+tools, new editors, new "vibe coding" practices, new protocols, MCP, A2A, SLOP, Agent Skills...
+And it's really hard to keep track of all that. Everything is
 scattered in different places, websites, repos, YouTube videos, etc.
 
 That's why we decided to
@@ -34,16 +33,21 @@ write this guide. It's our humble attempt to put everything together and present
 you the practices and tools around **AI coding** or **AI assisted code generation**, all in one
 place, with no fuss, in an accessible form.
 
+**🎯 Agent Skills First Approach:** We now recommend starting **every new project** with the **brainstorming skill** to validate your idea before coding. This single practice prevents most project failures and unlocks faster iteration with predictable outputs.
+
+Agent Skills are specialized capabilities that elevate your vibecoding from "ask Claude to build" to "collaborate with Claude to architect." They turn vibe coding from luck into systematic practice.
+
 - **If you're a coder but is not using AI code assistants yet**, this guide is
-  for you: it presents the most
-  recent tools and good practices to make the most of them to help on your daily
-  jobs. Either having AI as your copilot or being the copilot for an AI agent.
+  for you. Start with <a href="#agent-skills-workflow">Agent Skills Workflow</a> section—brainstorm your idea first, then code it.
+  You'll ship better projects faster than traditional vibecoding.
+
+- **If you're already vibecoding but getting inconsistent results**, Agent Skills are the answer.
+  The brainstorming skill validates ideas upfront. The engineering-culture skill designs systems that scale.
+  Everything else follows naturally with documented requirements.
 
 - **If you never coded before but you're interested in this new "vibe coding"
   thing to build your own SaaS and other software products**, this guide is
-  definetely for you: We'll try to do my best to remove obscurity and leave you
-  with what's required to start your journey, but being super critic about what
-  is really important and what's "just hype".
+  definitely for you. **Start with brainstorming skill** to validate your idea with Claude. Then follow the documented workflow to build it step by step.
 
 Cool, let's start!
 
@@ -111,51 +115,150 @@ important this is.
 
 # 🗺️ The Roadmap
 
-## How I start?
+## How I start? (Recommended: Agent Skills First Approach)
 
-- If you don't know how to code and want to play with it, we recommend starting
-with some web-based tool like [Bolt](https://bolt.new), [Replit](https://replit.com),
-[v0](https://v0.dev) or [Lovable](https://lovable.dev).
+### Step 1: Choose Your Code Editor and LLM
 
-- If you already know how to code, install [Cursor](https://cursor.com/) or [Windsurf](https://windsurf.com/).
-You can start with the
-free plan and then upgrade to $20 monthly plan. Cursor, is pretty good and cheap,
-given you'll have tons of tokens to use on most recent LLM models out there.  VSCode recently introduced their own [Agent Mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) as well. It pairs with Github Copilot and uses and Agentic Workflow to make changes and edit files.  Other editors are rapidly adding Agentic features, so check your favorite editor's website for more information. These agentic features are often only enabled within Beta or Insider builds.
+**First, decide which tools you'll use:**
 
-- If you want a more open source alternative, try [OpenHands](https://github.com/All-Hands-AI/OpenHands).
-You run it as a Docker container
-that exposes a webapp. You'll have to create an [Anthropic API account](https://console.anthropic.com/) to get access to an API key,
-or use some LLM available in [OpenRouter](https://openrouter.ai/).
+- **If you don't know how to code** and want to play with it, we recommend starting with some web-based tool like [Bolt](https://bolt.new), [Replit](https://replit.com), [v0](https://v0.dev) or [Lovable](https://lovable.dev).
 
-- If you already know how to code and are a terminal maniac like us, check [aider](https://aider.chat/), [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)
-or [OpenAI Codex](https://github.com/openai/codex).
-For those you'll need to setup API keys for Anthropic Claude, OpenAI GPT or for OpenRouter.
+- **If you already know how to code**, install [Cursor](https://cursor.com/) or [Windsurf](https://windsurf.com/). You can start with the free plan and then upgrade to $20 monthly plan. Cursor is pretty good and cheap, given you'll have tons of tokens to use on most recent LLM models out there. VSCode recently introduced their own [Agent Mode](https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode) as well. It pairs with Github Copilot and uses an Agentic Workflow to make changes and edit files. Other editors are rapidly adding Agentic features, so check your favorite editor's website for more information.
 
-- If you already know how to code, loves both terminal and some VSCode flavour, and really want to experiment
-the power of having subagents running in parallel for you, and don't care about costs but about getting
-things done, try [Amp](https://ampcode.com).
+- **If you want a more open source alternative**, try [OpenHands](https://github.com/All-Hands-AI/OpenHands). You run it as a Docker container that exposes a webapp. You'll have to create an [Anthropic API account](https://console.anthropic.com/) to get access to an API key, or use some LLM available in [OpenRouter](https://openrouter.ai/).
 
-> Suggestion: We really recommend creating an account in OpenRouter. It's really easy and you'll
-get access to the most updated LLM models and even free versions of it. For instance,
-our go-to LLM model these days is Gemini 2.5 Pro and it's possible to run it through
-OpenRouter for free
-(there are daily quotas of credits, but it's still an interesting option for experiments
-with aider and OpenHands, for instance).
+- **If you already know how to code and are a terminal maniac like us**, check [aider](https://aider.chat/), [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) or [OpenAI Codex](https://github.com/openai/codex). For those you'll need to setup API keys for Anthropic Claude, OpenAI GPT or for OpenRouter.
 
-> Important note: Claude Code is super expensive these days! You can easily spend $50/day.
-So be careful, monitor your usage. That's why it's recommended to start with Cursor so you don't
-have to worry about it.
+- **If you already know how to code, love both terminal and some VSCode flavour**, and really want to experiment the power of having subagents running in parallel for you, and don't care about costs but about getting things done, try [Amp](https://ampcode.com).
+
+> **For Agent Skills:** If you want to use Superpowers skills (`/superpowers:brainstorm`, `engineering-culture`), you need **Claude Code + Claude (Anthropic)**. This is the recommended setup for professional projects with structured documentation workflows.
+
+---
+
+### Step 2: Install Claude Code + Superpowers (If Using Claude Code)
+
+**Skip this step if you chose a different editor.**
+
+1. **Install Claude Code CLI:**
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   ```
+
+2. **Install Superpowers Plugins:**
+   - Follow the official setup: **https://github.com/obra/superpowers**
+   - This installs the superpowers plugin marketplace
+
+3. **Start Claude Code:**
+   ```bash
+   claude
+   ```
+
+4. **Verify brainstorming is installed:**
+   - Inside Claude Code, type: `/plugins`
+   - Go to the "installed" tab
+   - Find "superpowers" to confirm it's installed
+   - You now have access to `/superpowers:brainstorm`
+
+5. **Install engineering-culture skill** (in terminal, NOT in Claude Code):
+   ```bash
+   npx skills add RefoundAI/lenny-skills --skill engineering-culture
+   ```
+
+   This gives you access to `engineering-culture`
+
+**You're ready to start your first project!**
+
+---
+
+### Step 3: Use Brainstorming to Start Your Project
+
+The first thing you do with a new project is **invoke the brainstorming superpowers skill**:
+
+```bash
+# Inside Claude Code:
+/superpowers:brainstorm I want to build a task management app for remote teams
+```
+
+Then answer the focused questions Claude asks, one per message. This validates your idea before you write a single line of code.
 
 📚 Resources:
 
+- [Superpowers GitHub](https://github.com/obra/superpowers) - How to install and use superpowers
 - [Vibe Coding 101 with Replit](https://www.deeplearning.ai/short-courses/vibe-coding-101-with-replit/)
 - [Cursor AI Tutorial for Beginners [2025 Edition]](https://www.youtube.com/watch?v=3289vhOUdKA)
+- [Claude Code: Best practices for agentic coding](https://www.anthropic.com/engineering/claude-code-best-practices)
 
 ## How I prompt for coding? AKA How I vibe code?<a id='vibe'></a>
 
 After you installed and played with those tools a bit, you'll notice they will
 hallucinate, enter in endless cycles of trying to fix a possible error, etc.
-It's important to know how to prompt well. Some tips:
+It's important to know how to prompt well.
+
+### Why Claude Code is Recommended
+
+**Claude Code has unique advantages for vibecoding:**
+
+- **Workspace access** - Claude Code can read and write files directly in your project folder. No more copy-pasting code back and forth.
+- **CLAUDE.md file** - Create a `CLAUDE.md` file in your project root with project context, coding standards, and domain rules. Claude reads this automatically every session, ensuring consistent behavior.
+- **Superpowers integration** - Only Claude Code supports `/superpowers:brainstorm` and other agent skills that make vibecoding systematic instead of random.
+- **Professional workflow** - The combination of workspace access + CLAUDE.md + superpowers creates a development experience that scales from hobby projects to production-ready codebases.
+
+> **Quick Links - Choose Your Path:**
+>
+> 🎯 **Using Claude Code?** Read <a href="#brainstorming-vs-engineering-culture">Brainstorming vs Engineering-Culture: Which One Do You Need?</a> first to understand which skill fits your situation.
+>
+> 🔄 **Can't use Claude Code?** Skip to <a href="#alternative-approach">Alternative Approach: Traditional Vibecoding</a> for ChatGPT/other LLM workflows.
+
+### 🎯 Recommended Approach: Use Superpowers Brainstorming (BEST)
+
+**This is the recommended way to start any new project:**
+
+1. **Start Claude Code and invoke brainstorming:**
+   ```bash
+   claude
+   # Inside Claude Code, type:
+   /superpowers:brainstorm I want to build a task management app for remote teams
+   ```
+
+2. **Answer focused questions** (one per message):
+   - Claude will ask: What problem does this solve? Who's the user? What's success?
+   - Your idea will be refined through dialogue
+   - Each answer builds on the previous one
+
+3. **Get a validated design document:**
+   - Result: A complete, structured design (DESIGN-project-name.md)
+   - This becomes your PRD (Product Requirements Document)
+   - You and Claude share understanding before coding starts
+
+4. **Follow up with engineering-culture superpowers skill:**
+   ```bash
+   engineering-culture Based on this design, help me architect the system
+   ```
+   - Design how the system should be structured
+   - Establish patterns, DevEx principles, architecture decisions
+
+5. **Create documentation structure** (see <a href="#agent-skills-workflow">Agent Skills Workflow</a> section):
+   - START_HERE.md, REFERENCE.md, SPEC_*.md, etc.
+   - Each doc layer serves a specific purpose
+
+6. **Implement with focused prompts:**
+   - One feature per prompt
+   - Reference your docs and design
+   - Claude generates code to match your spec exactly
+
+**Why this works better:**
+- **Validated from the start** - You agree on what to build before coding
+- **Single source of truth** - Docs prevent hallucinations and inconsistencies
+- **Predictable outputs** - Superpowers skills follow structure; no guessing
+- **Token efficient** - Clear docs save thousands of tokens on clarifications
+
+---
+
+### Alternative Approach: Traditional Vibecoding (If you can't use Claude Code) <a id='alternative-approach'></a>
+
+If you're using ChatGPT or another LLM instead of Claude Code, here's the traditional method:
+
+Some tips for prompting well:
 
 - Do not ask everything in one prompt. Only prompting "hey, building me an app
   to for my pet store" doesn't help a software engineer and much less an AI :-)
@@ -179,7 +282,7 @@ If you prefer asciidoc (which has somewhat better support for structured documen
 use that and substitute ".adoc" in these instructions. The LLMs don't care, they
 will handle Markdown or asciidoc or any other purely textual format you throw at them.
 
-Here is a method/procedure/strategy/workflow that generally works well:
+Here is a method/procedure/strategy/workflow that generally works well (without Agent Skills):
 
 1. Use `ChatGPT 4.5`, `4o` or `o3` with the following prompt:
 
@@ -227,7 +330,7 @@ complexity jumps. Wire tasks into others, creating a dependency list. There
 should be no orphan tasks.
 
 VERY IMPORTANT:
-- Use markdown or asciidoc 
+- Use markdown or asciidoc
 - Each task and subtask should be a checklist item
 - Provide context enough per task so a developer should be able to implement it
 - Each task should have a number id
@@ -287,6 +390,422 @@ interesting tips for AI coding workflows based on any LLM model
 - [RepoPrompt](https://repoprompt.com/) is a tool to help assemble context from your project. It's worth watching an overview video of a [RepoPrompt Workflow](https://www.youtube.com/watch?v=fm3VreCt-5E) to learn how to easily leverage these tools to provide more context in your vibe coding prompts.
 - [Not all AI-assisted programming is vibe coding (but vibe coding rocks)](https://simonwillison.net/2025/Mar/19/vibe-coding/) by Simon Willison
 
+---
+
+## 🤖 Why Documentation Matters for Agent Skills <a id='documentation-foundation'></a>
+
+If you've been vibecoding with simple prompts, you might wonder: why bother with structured documentation? **Because Agent Skills fundamentally change the equation.**
+
+### The Problem with Unstructured Prompting
+
+When you ask Claude "build this feature," three things happen:
+1. **Token waste** - Claude spends thousands of tokens searching for context that doesn't exist
+2. **Hallucinations** - Claude invents facts instead of reading them from your docs
+3. **Inconsistency** - Each prompt gets different answers because there's no single source of truth
+
+### How Documentation Fixes This
+
+**Well-structured documentation is a force multiplier for Agent Skills:**
+
+- **Reduced cognitive load** - Claude doesn't have to invent what a "service" means; it reads your exact definition
+- **Predictable outputs** - Same documentation input = consistent agent behavior
+- **Token efficiency** - 1000 tokens of docs save 10,000 tokens in search/negotiation
+- **Architectural clarity** - Your documentation describes the system design; Claude executes it, not redesigns it
+
+### The Key Insight
+
+Agent Skills work best when you provide a **hierarchical information structure**:
+
+1. **Entry point** - Where to start (clear navigation)
+2. **Single source of truth** - Canonical facts (no contradictions)
+3. **Strategic context** - Why things matter (not just what)
+4. **Technical specifications** - Detailed blueprints (exact requirements)
+5. **Implementation patterns** - How to code (consistent style)
+6. **Prompting templates** - How to ask (reproducible requests)
+
+This isn't bureaucracy—it's the scaffolding that lets AI agents work like architects instead of guessing like interns.
+
+---
+
+## 🛠️ Agent Skills Workflow <a id='agent-skills-workflow'></a>
+
+Agent Skills transform vibecoding from trial-and-error into systematic practice. **The foundation is the brainstorming skill**, which replaces ad-hoc prompting with structured design.
+
+### What Are Superpowers Skills?
+
+Superpowers are specialized agent skills that provide guided workflows for solving specific problems. They integrate with Claude Code and can be installed from various sources.
+
+**Core skills for vibecoding projects:**
+
+- **`/superpowers:brainstorm [idea]`** ⭐ **PRIMARY**
+  - Turn vague ideas into structured designs through dialogue
+  - Your first step for any new project
+  - Installed via: Superpowers plugin marketplace ([https://github.com/obra/superpowers](https://github.com/obra/superpowers))
+
+- **`engineering-culture [context]`** ⭐ **PRIMARY**
+  - Design system structure, DevEx, and architectural patterns
+  - Installed via: `npx skills add RefoundAI/lenny-skills --skill engineering-culture`
+
+- **`/superpowers:test-driven-development [spec]`**
+  - Write tests before code (ensures correctness)
+
+- **`/superpowers:systematic-debugging [error]`**
+  - Fix bugs methodically (not randomly)
+
+- **`/superpowers:software-architecture [codebase]`**
+  - Design code that's maintainable (not spaghetti)
+
+**And 30,000+ community-created skills** available in the Superpowers marketplace and various skill providers.
+
+To explore available superpowers, see: [https://github.com/obra/superpowers](https://github.com/obra/superpowers)
+
+---
+
+## 🎯 Brainstorming vs Engineering-Culture: Which One Do You Need? <a id='brainstorming-vs-engineering-culture'></a>
+
+These are the two primary superpowers skills, but they solve **different problems**. Understanding the difference prevents wasted effort and confusion.
+
+### Brainstorming (Design-Focused)
+
+**Purpose:** Turn vague ideas into validated designs and specifications
+
+**Output:** A design document
+- File: `docs/plans/YYYY-MM-DD-<topic>-design.md`
+- Contains: Problem statement, user profiles, core features, technical approach, implementation phases
+
+**What it answers:**
+- What problem are we solving?
+- Who are the users?
+- What are the core features?
+- How should the product work?
+- What's the technical approach?
+
+**When to use:**
+- Starting a new project
+- Designing a new feature
+- Unclear on requirements
+- Need to validate an idea before coding
+
+---
+
+### Engineering-Culture (Organization-Focused)
+
+**Purpose:** Build strong engineering teams and development practices
+
+**Output:** Recommendations on:
+- Developer Experience (DevEx) practices
+- Team structure and communication
+- Code review processes, deployment strategy
+- Experimentation velocity and feedback loops
+- Technical decision-making
+
+**What it answers:**
+- How should our team operate?
+- What practices reduce friction in our workflow?
+- How do we scale as we grow?
+- What's blocking our productivity?
+- How do we maintain code quality?
+
+**When to use:**
+- Establishing team practices (new team or new project)
+- Scaling from solo to team development
+- Improving team productivity and flow
+- Making organizational/process decisions
+
+---
+
+### Decision: Which One Do You Need?
+
+**Use this table to decide:**
+
+| Scenario | Use This | Why |
+|----------|----------|-----|
+| **Starting a solo project or small team** | Brainstorming only | Engineering-culture is overkill for small teams |
+| **Designing a feature or component** | Brainstorming only | This is product design, not team practices |
+| **Setting up a new team's processes** | Engineering-culture only | You already know what to build; focus on how to build it together |
+| **Building a product AND establishing team norms** | Brainstorming first → then Engineering-culture | Separate concerns: first decide WHAT, then decide HOW the team operates |
+| **Improving team productivity** | Engineering-culture | Focus on practices, not product design |
+| **Unclear on product direction** | Brainstorming | Get clarity on requirements before discussing team practices |
+
+---
+
+### The Key Distinction
+
+- **Brainstorming** = "What should we build?" → *Design document*
+- **Engineering-Culture** = "How should our team work together to build things?" → *Practices & processes*
+
+**Most projects start with brainstorming.** Engineering-culture is for the separate concern of establishing team practices—which can be done after you understand what you're building.
+
+---
+
+### The Workflow: From Idea to Documented Code
+
+This is the **recommended workflow for starting any new project with Agent Skills:**
+
+**Phase 1: Brainstorm Design (Using `/superpowers:brainstorm`) ⭐ START HERE**
+
+```bash
+# Step 1: Start Claude Code
+claude
+
+# Step 2: Invoke the brainstorming superpowers skill with your idea
+/superpowers:brainstorm I want to build [your idea here]
+
+# Example:
+/superpowers:brainstorm I want to build a project management tool for distributed teams
+
+# Step 3: You answer focused questions (one per message)
+# Claude Q1: "What specific problems are you solving that existing tools don't?"
+# Your A1: "We focus on asynchronous updates for teams across time zones..."
+#
+# Claude Q2: "Who are your primary users?"
+# Your A2: "Engineering teams and project managers..."
+#
+# Claude Q3: "What are the critical features?"
+# Your A3: "Real-time collaboration, time-zone aware notifications, offline-first..."
+#
+# (Continue: Claude will ask 8-10 questions total, getting progressively deeper)
+
+# Step 4: Get validated design document
+# Result: DESIGN-project-name.md
+# Contains:
+#   - Problem statement
+#   - User profiles & personas
+#   - Core features & requirements
+#   - Technical approach
+#   - Implementation phases
+#   - Success metrics
+
+# Result: Shared understanding between you and Claude before any coding
+```
+
+**Why start with `/superpowers:brainstorm`?**
+- Clarifies fuzzy ideas into concrete requirements through dialogue
+- Prevents wasted coding on wrong assumptions
+- Saves thousands of tokens by nailing down specs upfront
+- Creates a permanent design record you can reference later
+- Ensures both you and Claude have the same understanding
+
+**Phase 2: Architecture & DevEx (Using `engineering-culture`)**
+
+```bash
+# Step 1: You have a validated design (DESIGN-project-name.md)
+
+# Step 2: Invoke the engineering-culture superpowers skill
+engineering-culture Based on this project, help me design the system architecture and DevEx practices
+
+# Step 3: Claude asks about your engineering philosophy
+# Questions like: How should this scale? What's your DevEx priority?
+#                  Single team or growing org? Monolith or services?
+
+# Step 4: You discuss architectural decisions
+# - System structure (components, layers, services)
+# - Development experience (local dev, testing, deployment)
+# - Team practices (code review, documentation, debugging)
+# - Technology decisions (tech stack, deployment strategy)
+
+# Step 5: Get architectural guidelines
+# Result: Engineering decisions documented, consistent patterns identified
+```
+
+**Phase 3: Documentation Structure**
+
+Create a 6-layer document hierarchy:
+
+| Layer | Purpose | File | When to Update |
+|-------|---------|------|-----------------|
+| **Entry Point** | Navigation guide | START_HERE.md | When adding new docs |
+| **Source of Truth** | All facts (no redundancy) | REFERENCE.md | When facts change |
+| **Strategy** | Why we build this way | PROJECT_CONTEXT.md | Rarely (business changes) |
+| **Architecture** | System design decisions | ARCHITECTURE.md | When structure changes |
+| **Specifications** | Exact feature requirements | SPEC_*.md | When requirements change |
+| **Implementation** | Code patterns & examples | IMPLEMENTATION_GUIDE.md | When style changes |
+| **Prompting Guide** | How to ask Claude for code | PROMPTING_GUIDE.md | When workflow changes |
+
+**Phase 4: Implementation (Using specific domain skills)**
+
+```
+1. You have docs + design
+2. Create a prompt using PROMPTING_GUIDE structure:
+   - Context (why)
+   - Business Rules (constraints)
+   - Specification (what - paste from SPEC_*.md)
+   - Implementation Patterns (how - paste from IMPLEMENTATION_GUIDE.md)
+   - Task (specific request)
+   - Success Criteria (how to verify)
+3. Claude generates code with perfect context
+4. Result: Code that matches your spec exactly
+```
+
+### Example: Building a New Project from Scratch with Superpowers Skills
+
+```bash
+# SETUP (do this once):
+# Terminal:
+npm install -g @anthropic-ai/claude-code
+# Follow: https://github.com/obra/superpowers
+npx skills add RefoundAI/lenny-skills --skill engineering-culture
+claude
+
+# THEN: Inside Claude Code, verify installations
+/plugins
+# Check "installed" tab for "superpowers" and "engineering-culture"
+
+# ===== NOW START YOUR PROJECT =====
+
+# YOU HAVE AN IDEA:
+# "I want to build a task management web app for remote teams"
+
+# STEP 1: Invoke brainstorming superpowers skill (THE MOST IMPORTANT FIRST STEP)
+/superpowers:brainstorm I want to build a task management web app for remote teams
+
+# STEP 2: Claude asks focused questions (answer one per message)
+# Claude Q1: "What specific problem does your task management app solve
+#             that existing apps like Todoist don't?"
+# You: "We focus on asynchronous team collaboration for distributed teams..."
+#
+# Claude Q2: "Who are your primary users?"
+# You: "Engineering teams working across multiple time zones..."
+#
+# Claude Q3: "What are the must-have features?"
+# You: "Task assignment, real-time updates, timeline view, notifications..."
+#
+# (Continue for ~8-10 questions as Claude digs deeper)
+
+# STEP 3: Get validated design document
+# Result: DESIGN-task-management.md
+# Contains:
+#   - Problem statement
+#   - User profiles & personas
+#   - Core features & requirements
+#   - Technical approach
+#   - Implementation phases
+#   - Success metrics & KPIs
+
+# STEP 4: Use engineering-culture superpowers skill (SECOND MAJOR STEP)
+engineering-culture Based on the design above, help me architect the system and define engineering practices
+
+# Claude will ask about your engineering philosophy:
+# - Scaling requirements? Single team or growing org?
+# - Tech stack preferences? Monolith or microservices?
+# - DevEx priorities? Local development? Testing strategy? Deployment?
+# - Team structure? How will the code be organized?
+
+# Result: ARCHITECTURE.md with architectural decisions, coding patterns, deployment strategy
+
+# STEP 5: Create documentation structure
+# NOW create multi-layer docs (see documentation structure table below):
+# - START_HERE.md: Navigation guide for team
+# - REFERENCE.md: All canonical facts (features, data models, terminology)
+# - PROJECT_CONTEXT.md: Why we're building this way (from brainstorm)
+# - ARCHITECTURE.md: System design from engineering-culture discussion
+# - SPEC_FEATURES.md: Exact requirements for each feature (from brainstorm)
+# - IMPLEMENTATION_GUIDE.md: Code patterns and conventions
+# - PROMPTING_GUIDE.md: How to ask Claude for code
+
+# STEP 6: Build features one at a time
+# For each feature:
+#   - Write/review SPEC_[feature].md
+#   - Create prompt using PROMPTING_GUIDE template
+#   - Include: Context + Spec + Patterns + Task
+#   - Claude generates code to match spec exactly
+#   - Review and iterate if needed
+```
+
+### Example: Adding a Feature to Existing Project
+
+```bash
+# SITUATION: You have a project + docs structure already set up
+# NEW REQUEST: "Add email notifications when someone comments on a task"
+
+# STEP 1: Does brainstorming apply?
+# If this is a small, well-defined feature -> NO, skip brainstorming
+# If unclear how this should work -> YES, use brainstorming skill
+
+# STEP 2: Create/update SPEC_EMAIL_NOTIFICATIONS.md
+# Include:
+#   - Exact requirements (when to send, what to include, etc.)
+#   - User flow
+#   - Database changes needed
+#   - Integration with existing services
+
+# STEP 3: Check REFERENCE.md & IMPLEMENTATION_GUIDE.md
+# Ensure you know:
+#   - Exact terminology (from REFERENCE.md)
+#   - Code patterns (from IMPLEMENTATION_GUIDE.md)
+
+# STEP 4: Create prompt using PROMPTING_GUIDE template:
+# Context: "Adding email notifications feature to existing app"
+# Business Rules: [paste relevant rules from REFERENCE.md]
+# Specification: [paste SPEC_EMAIL_NOTIFICATIONS.md]
+# Implementation Patterns: [paste patterns from IMPLEMENTATION_GUIDE.md]
+# Task: "Implement email notifications feature matching spec above"
+# Success Criteria: "Feature works, matches spec, follows patterns"
+
+# STEP 5: Claude generates code
+# It has full context from your docs, knows your patterns, delivers exactly what you want
+```
+
+### Key Principles for Agent Skills Success
+
+**1. Brainstorm FIRST for new projects** - Before writing any code, use brainstorming skill to validate your idea. This single step prevents 80% of project failures.
+
+**2. One feature per prompt** - Don't ask for login + payments + notifications in one request. Small, focused prompts = better results.
+
+**3. Use exact copy from docs** - If REFERENCE.md says "User Session," don't improvise with "User Auth" in prompts. Consistency matters.
+
+**4. Structure matters** - Agent Skills work best with clear context layers. That's why documentation exists—it's the scaffolding for agent understanding.
+
+**5. Test at each stage** - Design validation (brainstorm) → Architectural approval (engineering-culture) → Code review → Integration testing
+
+**6. Keep docs living** - When code changes, update docs immediately. Next agent iteration must have accurate docs to work from.
+
+**7. Documentation is NOT busywork** - It's the force multiplier for Agent Skills. Bad docs = agent hallucinations. Good docs = predictable, quality output.
+
+### Tools You'll Need
+
+To use Superpowers Skills effectively:
+
+```bash
+# Step 1: Install Claude Code CLI
+npm install -g @anthropic-ai/claude-code
+
+# Step 2: Install Superpowers plugin marketplace
+# Follow: https://github.com/obra/superpowers
+
+# Step 3: Install engineering-culture skill (in terminal)
+npx skills add RefoundAI/lenny-skills --skill engineering-culture
+
+# Step 4: Start Claude Code
+claude
+
+# Inside Claude Code:
+# - Type "/" to see available commands
+# - Use /plugins to verify installed plugins (find "superpowers")
+# - Use /superpowers:brainstorm [prompt] to start brainstorming
+# - Use engineering-culture [prompt] to design architecture
+# - Use /superpowers:[skill-name] [prompt] for other skills
+```
+
+**Required setup:**
+- [Anthropic API account](https://console.anthropic.com/) - Claude Code requires Claude
+- Superpowers plugins installed (follow https://github.com/obra/superpowers)
+- RefoundAI/lenny-skills installed for engineering-culture
+
+### When to Use Which Superpowers Skill
+
+| Situation | Use This Command | Installation |
+|-----------|---|---|
+| **🎯 "I have a vague idea for a new project"** | `/superpowers:brainstorm [idea]` ⭐ **START HERE** | Via https://github.com/obra/superpowers |
+| **🎯 "I have a design and want to plan architecture"** | `engineering-culture [context]` ⭐ **SECOND** | `npx skills add RefoundAI/lenny-skills --skill engineering-culture` |
+| "How should I organize this existing codebase?" | `/superpowers:software-architecture [context]` | Via https://github.com/obra/superpowers |
+| "My docs are scattered and inconsistent" | `/superpowers:brainstorm [topic]` | Via https://github.com/obra/superpowers |
+| "Tests are failing, I don't know why" | `/superpowers:systematic-debugging [error]` | Via https://github.com/obra/superpowers |
+| "Building a new feature from spec" | `/superpowers:test-driven-development [spec]` | Via https://github.com/obra/superpowers |
+| "I need patterns for my codebase" | `/superpowers:software-architecture [codebase]` | Via https://github.com/obra/superpowers |
+
+---
+
 ## Which LLM model I should use?
 
 LLMs are trained and finetuned with different goals, here is a comprehensive
@@ -294,8 +813,9 @@ list of goals/use you might have and which model to use it for:
 
 | Goal                 | Models                                                        |
 |----------------------|---------------------------------------------------------------|
-| Brainstorming        | GPT 5, 4o, o3, Grok                                           |
+| Brainstorming        | GPT 5, Gemini 3 Pro, Claude Opus 4.5                          |
 | Coding               | Claude Sonnet 4, Gemini 2.5 Pro, Grok, GPT 5, o3, o4-mini     |
+| Agent Skills         | Claude (Anthropic) - most Agent Skills require Claude         |
 
 Given LLMs change in a daily basis, this table gets outdated fast. Please check
 the following leaderboards for more accurate comparison:
@@ -338,7 +858,7 @@ Also, many tools support configuring a rules/conventions file in your home direc
 called `~/.global_conventions.md` and then add it to the `.aider.conf.yml` with `read: [~/.global_conventions.md, rules.md]`.
 
 You can add part of your PRD as rules, for instance, like the tech stack or
-some guidelines on code formating and style.
+some guidelines on code formating and style. When using Agent Skills, your IMPLEMENTATION_GUIDE becomes your project rules—keep it in `.cursor/rules/` so Cursor applies it automatically.
 
 Rules are super powerful and you can even use the AI itself to create the rules
 for you! [Check Geoff's method on that](https://ghuntley.com/specs/).
@@ -362,7 +882,7 @@ project.
 
 Turns out, if you leave your loved LLM free, with not much context of what to
 do, it will hallucinate pretty wild and quick. You need to tame the beast and
-PRDs are a great way to do it.
+PRDs are a great way to do it. **With Agent Skills, this becomes even more critical—Agent Skills read your docs as ground truth. Bad docs = bad agent behavior.**
 
 What I most like about PRDs is how they are super helpful to anyone, from
 people who never coded before to senior SWE or product managers.
@@ -371,6 +891,8 @@ You don't need any background to start a PRD, you just need your idea for an
 app and that's it.
 
 Check <a href="#vibe">here</a> how to use a LLM to create one for you.
+
+**For Agent Skills specifically:** Your PRD becomes a multi-layer structure (see <a href="#agent-skills-workflow">Agent Skills Workflow</a> above). Each layer serves a purpose. Don't combine them into one document—agents work better with clear separation of concerns.
 
 ## Keep a prompt log
 
@@ -425,7 +947,7 @@ super pretty UI
 Web-based AI coding platforms like Lovable use React while v0 uses Next.js.
 
 One trick you can use is to start your project at Lovable (you can get up to
-5 messages per day on their free plan), setup it to output your project to 
+5 messages per day on their free plan), setup it to output your project to
 GitHub and then just clone it in your local machine and continue AI coding it
 using Cursor. Then you can deploy it to places like Render, Fly.io, CloudFlare,
 etc. No strings attached. Specially interesting if you specifics/more complex
@@ -461,7 +983,7 @@ same language of your frontend (guessing it will be JavaScript or TypeScript
 most of the time), you can use Nodejs and Express.
 
 Backends are a great target for end-to-end tests, so consider guiding the
-agent to write tests and run them for each new feature and its subtasks.
+agent to write tests and run them for each new feature and its subtasks. **When using Agent Skills, use the test-driven-development skill to structure your test requirements before coding.**
 
 Once you're done with you backend, you can use its documentation (specially on
 HTTP endpoints) as input for the agent working in your frontend. This way
@@ -487,6 +1009,8 @@ interpreter/compiler gave to you as an error message and try to understand it.
 Copy and paste the error back to the LLM and ask it to fix it.
 Another great idea is to add MCP tools great for debugging like
 [BrowserTools](https://browsertools.agentdesk.ai/).
+
+**When using Agent Skills:** Don't manually debug. Instead, invoke the `systematic-debugging` skill. It will guide you and Claude through methodical debugging rather than trial-and-error guessing.
 
 ## What's MCP, SLOP and A2A and how can I benefit from it?
 
@@ -522,10 +1046,10 @@ focuses on LLM-tools communications.
 
 > Important: There are lots of good MCP servers out there and editors like Cursor support
 them. For now, only Anthropic Claude LLM supports them, so make sure to use it
-Claude when you want to work with MCP tools.
+Claude when you want to work with MCP tools. **Agent Skills also require Claude, so if you're using Agent Skills, you're already in the right ecosystem.**
 
 Anthropic keeps an updated list of MCP servers here:
-https://github.com/modelcontextprotocol/servers 
+https://github.com/modelcontextprotocol/servers
 
 📚 Resources:
 
@@ -558,6 +1082,8 @@ Another great tip is to prompt for changes at task level and not in project
 level. For instance, focus in one feature you want to implement and ask Cursor
 Agent to implement it. Give a mini-PRD for the specific feature. Imagine that
 you're guiding a junior developer to work in a specific GH ticket :-)
+
+**When using Agent Skills:** Create separate SPEC_* files for each feature/task. Agents work better with focused specifications than sprawling requirements.
 
 📚 Resources:
 
@@ -595,6 +1121,8 @@ skeletons and then let the LLM fill the gaps. Only after you have a good foundat
 good tests you can move to consumers of this core library, like exposing it as CLI or REST API to
 a future webapp, for instance.
 
+**This is exactly what Agent Skills enable:** Brainstorm design first (proper layering), then implement. No guessing.
+
 ## Should I use TDD or any other type of tests?
 
 Yes, tests are more important than ever. At current state of the art in 2025,
@@ -625,6 +1153,8 @@ or [fast-check](https://fast-check.dev/) for JavaScript/TypeScript.
 It's also important to always check the code generated by LLMs while trying to write or fix
 a test: sometimes they will even try to generate some hardcoded output just to make the test pass
 :-)
+
+**For Agent Skills:** Use the `test-driven-development` skill to structure your tests. Write tests that define the contract; agents will implement to the contract.
 
 ## How to make it safe?
 
@@ -720,6 +1250,15 @@ by Gerred is definetely a great start.
   including many features that are not widely known or documented in basic
   tutorials
 
+## Using Agent Skills Effectively
+
+- **Document first** - Create your doc structure (START_HERE, REFERENCE, SPEC, etc.) before prompting
+- **Small prompts** - One feature per prompt, not 5 features at once
+- **Reference patterns** - Point Claude to IMPLEMENTATION_GUIDE; don't repeat it in every prompt
+- **Validate output** - Check that generated code matches your SPEC exactly
+- **Keep docs living** - When code changes, update docs so the next agent iteration is correct
+- **Use exact copy** - Copy paste brand messaging, terminology, constraints from REFERENCE.md into prompts
+
 # 🛠️  Tools
 
 Here we keep an updated list of main tools around using AI for coding. We tested
@@ -738,7 +1277,7 @@ most of them and you'll find our honest opinion during the time we tested them.
 
 ## CLI
 
-- [Claude Code](https://github.com/anthropics/claude-code)
+- [Claude Code](https://github.com/anthropics/claude-code) - **Recommended for Agent Skills**
 - [Aider](http://aider.chat/)
 - [Claude Engineer](https://github.com/Doriandarko/claude-engineer)
 - [Roo Code](https://github.com/RooVetGit/Roo-Code)
@@ -774,6 +1313,7 @@ most of them and you'll find our honest opinion during the time we tested them.
 - [Repo Prompt](https://repoprompt.com/)
 - [Uzi](http://uzi.sh/)
 - [Claudia](https://claudia.asterisk.so/)
+- [skills.sh](https://skills.sh) - **Find and install Agent Skills**
 
 # 🤗 Who to follow
 
