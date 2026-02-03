@@ -140,9 +140,8 @@ important this is.
 **Skip this step if you chose a different editor.**
 
 1. **Install Claude Code CLI:**
-   ```bash
-   npm install -g @anthropic-ai/claude-code
-   ```
+   - Floow the official setup: **https://code.claude.com/docs/en/quickstart**
+   - This installs the Claude Code CLI
 
 2. **Install Superpowers Plugins:**
    - Follow the official setup: **https://github.com/obra/superpowers**
